@@ -1,9 +1,13 @@
-def insertionSortDecreasingOrder(arr):
-    """
-    Sorts an array in decreasing order using the insertion sort algorithm.
-    Parameters:
-    arr (list): The list of elements to be sorted.
-    Returns:
-    list: The sorted list in decreasing order.
-    """
-    
+def isdo(array):
+    for i in range(1, len(array)):
+        key = array[i]
+        j = i - 1
+        while j >= 0 and key > array[j]:
+            array[j + 1] = array[j]
+            j -= 1
+        array[j + 1] = key
+
+array = [33, 44, 99, 22, 66, 11]
+isdo(array)
+print(array)
+
